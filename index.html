@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>Dollsbane - Game Boy Shell</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -8,11 +10,8 @@
 <body>
 
   <div class="gameboy">
-
     <div class="top-bar">
-      
-      <div classs="led-wrap">
-        
+      <div class="led-wrap">
         <div class="led"></div>
       </div>
     </div>
@@ -20,51 +19,18 @@
     <div class="screen-housing">
       <div class="screen-label">· GAME BOY ·</div>
       <div class="screen-bezel">
-        <div id="game-canvas"></div>
+        
+        <div id="game-canvas">
+          <button class="menu-btn btn-start">Start</button>
+          <button class="menu-btn btn-settings">Settings</button>
+          <button class="menu-btn btn-credits">Credits</button>
+          <button class="menu-btn btn-exit">Exit</button>
+        </div>
+
       </div>
     </div>
-
   </div>
 
-  <script>
-    class GameScene extends Phaser.Scene {
-      create() {
-        this.add.rectangle(300, 300, 600, 600, 0x0f380f);
-      }
-    }
-
-    new Phaser.Game({
-      type: Phaser.AUTO,
-      width: Phaser.Scale.AUTO,
-      height: 600,
-      backgroundColor: '#0f380f',
-      parent: 'game-canvas',
-      scene: GameScene,
-      banner: false
-    });
-  </script>
-
-</body>
-
-    
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dollsbane Main Menu</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
-</head>
-<body>
-
-    <div id="menu-container">
-        <canvas id="gameCanvas" width="600" height="600"></canvas>
-
-        <button class="menu-btn btn-start">Start</button>
-        <button class="menu-btn btn-settings">Settings</button>
-        <button class="menu-btn btn-credits">Credits</button>
-        <button class="menu-btn btn-exit">Exit</button>
-    </div>
-
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
