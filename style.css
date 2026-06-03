@@ -88,20 +88,7 @@
     height: 100% !important;
   }
   
-  /* --- Overlay Menu Components --- */
-  .menu-btn {
-    position: absolute;
-    z-index: 10;
-    height: 10%; /* Percentage-based sizing to scale smoothly */
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 6px;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 10px; 
-    cursor: pointer;
-    outline: none;
-    transition: transform 0.15s ease, background-color 0.15s ease;
-  }
+  
   
   .menu-btn:hover, .menu-btn:focus {
     background-color: #e2e8f0;
