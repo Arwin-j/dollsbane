@@ -1,4 +1,52 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="gameboy">
+
+    <div class="top-bar">
+      
+      <div classs="led-wrap">
+        
+        <div class="led"></div>
+      </div>
+    </div>
+
+    <div class="screen-housing">
+      <div class="screen-label">· GAME BOY ·</div>
+      <div class="screen-bezel">
+        <div id="game-canvas"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    class GameScene extends Phaser.Scene {
+      create() {
+        this.add.rectangle(300, 300, 600, 600, 0x0f380f);
+      }
+    }
+
+    new Phaser.Game({
+      type: Phaser.AUTO,
+      width: Phaser.Scale.AUTO,
+      height: 600,
+      backgroundColor: '#0f380f',
+      parent: 'game-canvas',
+      scene: GameScene,
+      banner: false
+    });
+  </script>
+
+</body>
+
+    
 <html lang="en">
 <head>
     <meta charset="UTF-8">
